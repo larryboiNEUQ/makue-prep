@@ -1091,3 +1091,158 @@ pre.code .num {
   font-weight: 800;
   color: var(--accent-deep);
 }
+
+
+/* ----- fill-in-blank ----- */
+.fill-item {
+  padding: 18px 18px 16px;
+  background: #faf8f4;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.fill-q {
+  font-weight: 650;
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.fill-line {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.fill-input {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  min-width: 7em;
+  max-width: 100%;
+}
+
+.fill-input-inline {
+  display: inline-block;
+  min-width: 4.5em;
+  width: 5.5em;
+  padding: 4px 8px;
+  margin: 0 2px;
+  vertical-align: baseline;
+}
+
+.fill-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.fill-input.fill-ok {
+  border-color: var(--ok);
+  background: var(--ok-soft);
+}
+
+.fill-input.fill-bad {
+  border-color: #d4a090;
+  background: #fdf0ec;
+}
+
+.fill-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.fill-actions .btn {
+  font-size: 0.88rem;
+  padding: 8px 14px;
+}
+
+.fill-feedback {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.fill-feedback.show {
+  display: block;
+}
+
+.fill-feedback.ok {
+  background: var(--ok-soft);
+  color: #1a5c3e;
+}
+
+.fill-feedback.bad {
+  background: #fdf0ec;
+  color: #8a4030;
+}
+
+/* ----- platform practice (LeetCode) ----- */
+.platform-box {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--teal-soft);
+  border: 1px solid #b8ddd6;
+  border-radius: 10px;
+}
+
+.platform-title {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a6b60;
+}
+
+.platform-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.platform-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.platform-list a {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.platform-hint {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.platform-list-lg {
+  margin: 14px 0 18px;
+  gap: 16px;
+}
+
+.platform-list-lg li {
+  padding: 14px 16px;
+  background: #faf8f4;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+/* demote unused freeform coding textarea styles (kept harmless) */
+.drill textarea.code-input {
+  display: none;
+}
