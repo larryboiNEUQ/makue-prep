@@ -13,12 +13,12 @@
       <a class="nav-brand" href="index.html">Makue <span>垫脚课</span></a>
       <ul class="nav-links">
         <li><a href="#intro">导读</a></li>
-        <li><a href="#c1">步数</a></li>
-        <li><a href="#c2">嵌套</a></li>
-        <li><a href="#c3">数组</a></li>
-        <li><a href="#c4">Set</a></li>
-        <li><a href="#c5">Map</a></li>
-        <li><a href="#c6">取舍</a></li>
+        <li><a href="#c1">单元1</a></li>
+        <li><a href="#c2">单元2</a></li>
+        <li><a href="#c3">单元3</a></li>
+        <li><a href="#c4">单元4</a></li>
+        <li><a href="#c5">单元5</a></li>
+        <li><a href="#c6">单元6</a></li>
         <li><a href="#wrap">收尾</a></li>
       </ul>
       <div class="nav-pages">
@@ -28,81 +28,84 @@
     </div>
   </nav>
 
-  <main class="wrap">
-    <div class="cross-cta" style="margin-top:28px">
-      <p>若「变量 / 数组 / 扫一遍」还不熟，建议先补垫课，再回来。</p>
+  <main class="wrap lesson-page">
+    <div class="cross-cta lesson-top-cta">
+      <p>若「变量 / 数组 / 扫一遍」还不熟，先补垫课，再回来。</p>
       <a class="btn btn-ghost" href="prep.html">← 先补课前垫脚</a>
     </div>
 
-    <header class="hero" style="padding-top:24px">
+    <header class="hero lesson-hero">
       <div class="hero-badge">正式启动课 · Lesson</div>
       <h1>Big-O 直觉 + 数组 / Set / Map 怎么选</h1>
       <p class="hero-lead">
-        按<strong>教师带练</strong>节奏：每个单元都是「导入 → 精读外链一小节 → 中文讲解 → 写一小段代码」。
-        目标是审查时能问对问题，不是背完整复杂度表。
+        每个单元四步：<strong>导入 → 去读 → 讲解 → 小练</strong>。
+        目标：审查时能问对问题。不必背完整复杂度表。
       </p>
       <div class="hero-meta">
         <span><strong>时长</strong> 约 25–40 分钟</span>
         <span><strong>前提</strong> <a href="prep.html">课前垫脚</a> 或同等基础</span>
-        <span><strong>产出</strong> 能写结构取舍判断 + 小片段代码</span>
+        <span><strong>产出</strong> 结构取舍判断 + 小段代码</span>
       </div>
     </header>
 
     <!-- intro -->
     <section class="chapter" id="intro">
       <div class="card how-to-learn">
-        <div class="chapter-num">怎么学</div>
-        <h2>今晚的循环</h2>
-        <p>审查里常出现：长列表上反复 <code class="inline">includes</code>、说不清 n、只会喊「O(n²)」却指不出慢在哪一行。</p>
+        <p class="unit-kicker">导读</p>
+        <h2 class="unit-title">今晚怎么学</h2>
+        <p>审查里常见问题：长列表上反复 <code class="inline">includes</code>；说不清 n；只会喊「O(n²)」，却指不出慢在哪一行。</p>
         <p>每个单元固定四步：</p>
-        <ol>
-          <li><strong>A 导入</strong> — 为什么要学这一刀。</li>
-          <li><strong>B 精读</strong> — 打开指定外链的<strong>指定小节</strong>（已核实可访问），只读那一块。</li>
-          <li><strong>C 讲解</strong> — 用白话中文把要点钉死。</li>
-          <li><strong>D 编程小练</strong> — 填空 / 改写 / 写审查评论；能检查的会给你即时反馈。</li>
+        <ol class="step-overview">
+          <li><strong>导入</strong> — 说明为什么要学这一刀。</li>
+          <li><strong>去读</strong> — 打开指定外链的指定小节。只读那一块。</li>
+          <li><strong>讲解</strong> — 用短句把要点钉死。</li>
+          <li><strong>小练</strong> — 填空 / 改写 / 写审查评论。能检查的会给即时反馈。</li>
         </ol>
         <div class="callout teal">
-          <strong>和垫课的关系：</strong>垫课建立「扫一遍」；本课接上审查用语（Big-O）和 Set / Map API。
+          <strong>和垫课的关系：</strong>垫课建立「扫一遍」。本课接上审查用语（Big-O）和 Set / Map API。
         </div>
       </div>
 
-      <nav class="card toc" aria-label="单元目录" style="margin-top:16px">
-        <p class="chapter-num">目录</p>
+      <nav class="card toc" aria-label="单元目录">
+        <p class="unit-kicker">目录</p>
         <ol class="toc-list">
-          <li><a href="#c1">数步数：n 是什么</a></li>
-          <li><a href="#c2">嵌套循环与隐藏的 n²</a></li>
-          <li><a href="#c3">数组：便宜什么、贵什么</a></li>
-          <li><a href="#c4">Set：问「有没有」</a></li>
-          <li><a href="#c5">Map：问「这个键对应谁」</a></li>
-          <li><a href="#c6">取舍表 + 审查评论</a></li>
+          <li><a href="#c1"><strong>单元 1</strong> · 数步数：n 是什么</a></li>
+          <li><a href="#c2"><strong>单元 2</strong> · 嵌套循环与隐藏的 n²</a></li>
+          <li><a href="#c3"><strong>单元 3</strong> · 数组：便宜什么、贵什么</a></li>
+          <li><a href="#c4"><strong>单元 4</strong> · Set：问「有没有」</a></li>
+          <li><a href="#c5"><strong>单元 5</strong> · Map：问「这个键对应谁」</a></li>
+          <li><a href="#c6"><strong>单元 6</strong> · 取舍表 + 审查评论</a></li>
         </ol>
       </nav>
     </section>
 
-    <!-- ========== CYCLE 1 ========== -->
-    <section class="chapter" id="c1">
+    <!-- ========== UNIT 1 ========== -->
+    <section class="chapter unit" id="c1">
       <div class="card">
-        <div class="chapter-num">单元 01 · 约 5 分钟</div>
-        <h2>数步数：n 是什么</h2>
+        <p class="unit-kicker">约 5 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 1</span> 数步数：n 是什么</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>先别管符号。审查时真正要回答的是：<strong>列表长度叫 n 时，这段代码大约执行多少次「比一下 / 看一眼」？</strong> n 变大，步数怎么涨，才决定会不会卡。</p>
+            <h3 class="step-title"><span class="step-num">1.1</span> 导入</h3>
+            <p>先别管符号。</p>
+            <p>审查时要回答：列表长度叫 <strong>n</strong> 时，这段代码大约执行多少次「比一下 / 看一眼」？</p>
+            <p>n 变大，步数怎么涨，才决定会不会卡。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">1.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 Open Data Structures（Java 版）§1.3.3 <strong>Asymptotic Notation</strong>。重点看：用「计算机指令次数」谈运行时间、以及为何用 big-Oh 粗粒度描述。</p>
+              <p>打开 Open Data Structures（Java 版）§1.3.3 <strong>Asymptotic Notation</strong>。</p>
+              <p>重点：用「计算机指令次数」谈运行时间；为何用 big-Oh 做粗粒度描述。</p>
               <a href="https://opendatastructures.org/ods-java/1_3_Mathematical_Background.html#SECTION00433000000000000000" target="_blank" rel="noopener">opendatastructures.org · §1.3.3 Asymptotic Notation</a>
-              <span class="read-target">读到文中 <code>snippet()</code> 那个单层 for 示例即可，不必抠证明细节。</span>
+              <span class="read-target">读到文中 <code>snippet()</code> 那个单层 for 示例即可。不必抠证明。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
-            <p>口语义：</p>
+            <h3 class="step-title"><span class="step-num">1.3</span> 讲解</h3>
+            <p>口语义如下：</p>
             <table class="compare-table">
               <thead>
                 <tr><th>写法</th><th>白话</th><th>典型样子</th></tr>
@@ -127,18 +130,21 @@
             </table>
             <div class="analogy">
               <div class="analogy-label">具体数字</div>
-              n = 10 → 单层约 10 步，双层约 100 步。<br />
-              n = 1000 → 单层约 1000，双层约 100 万。差别会突然变痛。
+              <p>n = 10 → 单层约 10 步，双层约 100 步。</p>
+              <p>n = 1000 → 单层约 1000，双层约 100 万。差别会突然变痛。</p>
             </div>
-            <p>审查话术：「这里对 length=n 的列表做了嵌套扫描，是 O(n²）。n 到几千时可能卡。」——比只丢一个符号有用。</p>
+            <p>审查话术示例：「这里对 length=n 的列表做了嵌套扫描，是 O(n²)。n 到几千时可能卡。」</p>
+            <p>这句话比只丢一个符号更有用。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练</div>
+            <h3 class="step-title"><span class="step-num">1.4</span> 小练</h3>
             <div class="drill" data-drill="count-steps">
               <p class="drill-prompt">
                 下面函数里，内层比较 <code class="inline">===</code> 大约执行多少次？（设 <code class="inline">list.length === n</code>）
-                在注释处把 <code class="inline">???</code> 改成 <code class="inline">n</code>、<code class="inline">n*n</code> 或 <code class="inline">1</code>，并补上粗粒度复杂度注释。
+              </p>
+              <p class="drill-prompt">
+                把注释里的 <code class="inline">???</code> 改成 <code class="inline">n</code>、<code class="inline">n*n</code> 或 <code class="inline">1</code>。再补上粗粒度复杂度注释。
               </p>
               <textarea class="code-input" spellcheck="false" aria-label="练习代码">function countPairs(list) {
   let hits = 0;
@@ -174,45 +180,51 @@
       </div>
     </section>
 
-    <!-- ========== CYCLE 2 ========== -->
-    <section class="chapter" id="c2">
+    <!-- ========== UNIT 2 ========== -->
+    <section class="chapter unit" id="c2">
       <div class="card">
-        <div class="chapter-num">单元 02 · 约 6 分钟</div>
-        <h2>嵌套循环与隐藏的 n²</h2>
+        <p class="unit-kicker">约 6 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 2</span> 嵌套循环与隐藏的 n²</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>不一定写成双 <code class="inline">for</code> 才叫 O(n²)。外层扫一遍，里面每次又 <code class="inline">includes</code> / <code class="inline">find</code> 整表，效果一样贵。这一单元练：<strong>认出隐藏嵌套，并改成 Set</strong>。</p>
+            <h3 class="step-title"><span class="step-num">2.1</span> 导入</h3>
+            <p>不一定写成双 <code class="inline">for</code> 才叫 O(n²)。</p>
+            <p>外层扫一遍，里面每次又 <code class="inline">includes</code> / <code class="inline">find</code> 整表，效果一样贵。</p>
+            <p>本单元目标：认出隐藏嵌套，并改成 Set。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">2.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 javascript.info《Loops: while and for》的 <strong>Labels for break/continue</strong> 小节——开头用「多层嵌套循环」作例子。弄清：内层循环会相对外层再跑一整圈。</p>
+              <p>打开 javascript.info《Loops: while and for》的 <strong>Labels for break/continue</strong> 小节。</p>
+              <p>开头用「多层嵌套循环」作例子。弄清：内层会相对外层再跑一整圈。</p>
               <a href="https://javascript.info/while-for#labels-for-break-continue" target="_blank" rel="noopener">javascript.info · Labels for break/continue</a>
-              <span class="read-target">读懂「外层 × 内层」的心智即可；标签语法本身不是本课重点。</span>
+              <span class="read-target">读懂「外层 × 内层」即可。标签语法不是本课重点。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
+            <h3 class="step-title"><span class="step-num">2.3</span> 讲解</h3>
             <pre class="code"><span class="cmt">// 隐藏的 n²：外层 n 次，每次 includes 再扫 n</span>
 <span class="kw">for</span> (<span class="kw">const</span> id <span class="kw">of</span> incomingIds) {
   <span class="kw">if</span> (existingIds.includes(id)) { <span class="cmt">/* ... */</span> }
 }</pre>
-            <p>若两边长度都接近 n，总步数约 n²。改法：先花 O(n) 建 Set，再每次 <code class="inline">has</code>（平均约 O(1)），总体约 O(n)。</p>
+            <p>若两边长度都接近 n，总步数约 n²。</p>
+            <p>改法：先花 O(n) 建 Set。再每次 <code class="inline">has</code>（平均约 O(1)）。总体约 O(n)。</p>
             <div class="callout">
-              <strong>审查口令：</strong>「热路径上对数组 includes；列表会变长时，先 <code class="inline">new Set</code> 再 <code class="inline">has</code>。」
+              <strong>审查口令：</strong>热路径上对数组 <code class="inline">includes</code>；列表会变长时，先 <code class="inline">new Set</code>，再 <code class="inline">has</code>。
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练</div>
+            <h3 class="step-title"><span class="step-num">2.4</span> 小练</h3>
             <div class="drill" data-drill="rewrite-set">
               <p class="drill-prompt">
                 实现 <code class="inline">filterAllowed(incoming, allowed)</code>：返回 <code class="inline">incoming</code> 里出现在 <code class="inline">allowed</code> 中的元素（保持原顺序）。
-                <strong>禁止</strong>在循环里对数组用 <code class="inline">includes</code>；请用 Set。
+              </p>
+              <p class="drill-prompt">
+                <strong>禁止</strong>在循环里对数组用 <code class="inline">includes</code>。请用 Set。
               </p>
               <textarea class="code-input" spellcheck="false" aria-label="练习代码">function filterAllowed(incoming, allowed) {
   // TODO: 用 Set 改写，不要在循环里 allowed.includes(...)
@@ -244,29 +256,32 @@
       </div>
     </section>
 
-    <!-- ========== CYCLE 3 ========== -->
-    <section class="chapter" id="c3">
+    <!-- ========== UNIT 3 ========== -->
+    <section class="chapter unit" id="c3">
       <div class="card">
-        <div class="chapter-num">单元 03 · 约 5 分钟</div>
-        <h2>数组：便宜什么、贵什么</h2>
+        <p class="unit-kicker">约 5 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 3</span> 数组：便宜什么、贵什么</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>数组擅长<strong>按位置</strong>读写，不擅长<strong>反复按内容查找</strong>。搞清哪一类操作便宜，审查才不会乱优化。</p>
+            <h3 class="step-title"><span class="step-num">3.1</span> 导入</h3>
+            <p>数组擅长<strong>按位置</strong>读写。</p>
+            <p>数组不擅长<strong>反复按内容查找</strong>。</p>
+            <p>先分清哪一类操作便宜，审查才不会乱优化。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">3.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 MDN <code>Array.prototype.includes()</code> 的 <strong>Description</strong>：它如何从左往右搜、以及「读 length 再逐个访问」的行为。</p>
+              <p>打开 MDN <code>Array.prototype.includes()</code> 的 <strong>Description</strong>。</p>
+              <p>看它如何从左往右搜，以及「读 length 再逐个访问」的行为。</p>
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes#description" target="_blank" rel="noopener">MDN · Array.prototype.includes · Description</a>
-              <span class="read-target">顺带扫一眼同页的语法参数即可；记住「查找 ≈ 线性扫」就够。</span>
+              <span class="read-target">扫一眼同页语法参数即可。记住「查找 ≈ 线性扫」就够。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
+            <h3 class="step-title"><span class="step-num">3.3</span> 讲解</h3>
             <table class="compare-table">
               <thead>
                 <tr><th>操作</th><th>直觉代价</th><th>说明</th></tr>
@@ -302,10 +317,10 @@
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练</div>
+            <h3 class="step-title"><span class="step-num">3.4</span> 小练</h3>
             <div class="drill" data-drill="array-costs">
               <p class="drill-prompt">
-                给下面三行各标上复杂度：把注释里的 <code class="inline">?</code> 改成 <code class="inline">O(1)</code>、<code class="inline">O(n)</code> 或 <code class="inline">O(n*n)</code>（也可用 <code class="inline">O(n²)</code>）。
+                给下面三行各标上复杂度。把注释里的 <code class="inline">?</code> 改成 <code class="inline">O(1)</code>、<code class="inline">O(n)</code> 或 <code class="inline">O(n*n)</code>（也可用 <code class="inline">O(n²)</code>）。
               </p>
               <textarea class="code-input" spellcheck="false" aria-label="练习代码">const arr = [/* n 个元素 */];
 arr[0];                        // ?
@@ -333,43 +348,49 @@ arr.includes(x);               <span class="cmt">// O(n)</span>
       </div>
     </section>
 
-    <!-- ========== CYCLE 4 ========== -->
-    <section class="chapter" id="c4">
+    <!-- ========== UNIT 4 ========== -->
+    <section class="chapter unit" id="c4">
       <div class="card">
-        <div class="chapter-num">单元 04 · 约 7 分钟</div>
-        <h2>Set：专门回答「有没有」</h2>
+        <p class="unit-kicker">约 7 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 4</span> Set：专门回答「有没有」</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>Set 存唯一值。平均情况下 <code class="inline">has</code> 比同规模数组的 <code class="inline">includes</code> 便宜——规范要求平均访问亚线性。适合「这个值在不在集合里」问很多遍。</p>
+            <h3 class="step-title"><span class="step-num">4.1</span> 导入</h3>
+            <p>Set 存唯一值。</p>
+            <p>平均情况下，<code class="inline">has</code> 比同规模数组的 <code class="inline">includes</code> 便宜。</p>
+            <p>适合「这个值在不在集合里」问很多遍。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">4.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 MDN <strong>Set</strong> 页面，依次读：</p>
+              <p>打开 MDN <strong>Set</strong> 页面，依次读两处：</p>
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#description" target="_blank" rel="noopener">1) Description</a>
               <span class="read-target">唯一值、插入序、以及规范对平均访问时间的要求。</span>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#performance" target="_blank" rel="noopener" style="display:block;margin-top:10px">2) Performance</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#performance" target="_blank" rel="noopener" class="read-link-gap">2) Performance</a>
               <span class="read-target"><code>has</code> 平均快于同长度数组的 <code>includes</code>。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
+            <h3 class="step-title"><span class="step-num">4.3</span> 讲解</h3>
             <pre class="code"><span class="kw">const</span> existing = <span class="kw">new</span> Set([<span class="str">"a"</span>, <span class="str">"b"</span>, <span class="str">"c"</span>]);
 existing.has(<span class="str">"b"</span>);  <span class="cmt">// true</span>
 existing.add(<span class="str">"d"</span>);</pre>
-            <p>需要顺序、下标、重复元素时，数组仍然合适。建 Set 本身是 O(n)：只查 1 次时，单次 includes 未必更差；查很多次才凸显 Set。</p>
+            <p>需要顺序、下标或重复元素时，继续用数组。</p>
+            <p>建 Set 本身是 O(n)。只查 1 次时，单次 <code class="inline">includes</code> 未必更差。</p>
+            <p>查很多次时，Set 才凸显。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练</div>
+            <h3 class="step-title"><span class="step-num">4.4</span> 小练</h3>
             <div class="drill" data-drill="has-duplicate">
               <p class="drill-prompt">
-                实现 <code class="inline">hasDuplicate(nums)</code>：若数组里存在重复元素返回 <code class="inline">true</code>，否则 <code class="inline">false</code>。
-                用 Set；目标平均接近 O(n)，不要双重循环。
+                实现 <code class="inline">hasDuplicate(nums)</code>：数组里有重复元素则返回 <code class="inline">true</code>，否则返回 <code class="inline">false</code>。
+              </p>
+              <p class="drill-prompt">
+                用 Set。目标平均接近 O(n)。不要双重循环。
               </p>
               <textarea class="code-input" spellcheck="false" aria-label="练习代码">function hasDuplicate(nums) {
   // TODO: 用 Set 判断是否有重复
@@ -397,43 +418,50 @@ existing.add(<span class="str">"d"</span>);</pre>
       </div>
     </section>
 
-    <!-- ========== CYCLE 5 ========== -->
-    <section class="chapter" id="c5">
+    <!-- ========== UNIT 5 ========== -->
+    <section class="chapter unit" id="c5">
       <div class="card">
-        <div class="chapter-num">单元 05 · 约 6 分钟</div>
-        <h2>Map：专门回答「这个键对应谁」</h2>
+        <p class="unit-kicker">约 6 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 5</span> Map：专门回答「这个键对应谁」</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>Set 只答「在不在」。若要「用 id 拿到整行对象」，用 Map（或 id 为键的普通对象）。反复 <code class="inline">arr.find(u =&gt; u.id === id)</code> 是 O(n)。</p>
+            <h3 class="step-title"><span class="step-num">5.1</span> 导入</h3>
+            <p>Set 只答「在不在」。</p>
+            <p>若要「用 id 拿到整行对象」，用 Map（或 id 为键的普通对象）。</p>
+            <p>反复 <code class="inline">arr.find(u =&gt; u.id === id)</code> 是 O(n)。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">5.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 javascript.info《Map and Set》的 <strong>Map</strong> 小节：创建、get、has、以及和普通对象的差别直觉。</p>
+              <p>打开 javascript.info《Map and Set》的 <strong>Map</strong> 小节。</p>
+              <p>看 set、get、has，以及和普通对象的差别直觉。</p>
               <a href="https://javascript.info/map-set#map" target="_blank" rel="noopener">javascript.info · Map</a>
-              <span class="read-target">可选加深：同页 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#description" target="_blank" rel="noopener">MDN Map · Description</a>。</span>
+              <span class="read-target">可选加深：同页旁链 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#description" target="_blank" rel="noopener">MDN Map · Description</a>。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
+            <h3 class="step-title"><span class="step-num">5.3</span> 讲解</h3>
             <pre class="code"><span class="kw">const</span> byId = <span class="kw">new</span> Map(users.map(u =&gt; [u.id, u]));
 byId.get(<span class="str">"u2"</span>);  <span class="cmt">// 之后每次查找都便宜</span></pre>
             <div class="analogy">
               <div class="analogy-label">和普通对象 {}</div>
-              键几乎总是字符串/数字时，对象字面量也常够用。Map 更适合任意类型键、或频繁增删且要保持插入序。审查里两者都能表达「按 id 索引」。
+              <p>键几乎总是字符串/数字时，对象字面量也常够用。</p>
+              <p>Map 更适合任意类型键，或频繁增删且要保持插入序。</p>
+              <p>审查里两者都能表达「按 id 索引」。</p>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练</div>
+            <h3 class="step-title"><span class="step-num">5.4</span> 小练</h3>
             <div class="drill" data-drill="index-by-id">
               <p class="drill-prompt">
                 实现 <code class="inline">indexById(users)</code>：返回一个 Map，键为 <code class="inline">user.id</code>，值为整个 user 对象。
-                再实现 <code class="inline">getName(byId, id)</code>：用 Map 取名字，找不到返回 <code class="inline">null</code>。
+              </p>
+              <p class="drill-prompt">
+                再实现 <code class="inline">getName(byId, id)</code>：用 Map 取名字；找不到返回 <code class="inline">null</code>。
               </p>
               <textarea class="code-input" spellcheck="false" aria-label="练习代码">function indexById(users) {
   // TODO: return Map&lt;id, user&gt;
@@ -464,29 +492,32 @@ function getName(byId, id) {
       </div>
     </section>
 
-    <!-- ========== CYCLE 6 ========== -->
-    <section class="chapter" id="c6">
+    <!-- ========== UNIT 6 ========== -->
+    <section class="chapter unit" id="c6">
       <div class="card">
-        <div class="chapter-num">单元 06 · 约 6 分钟</div>
-        <h2>取舍表 + 一条审查评论</h2>
+        <p class="unit-kicker">约 6 分钟</p>
+        <h2 class="unit-title"><span class="unit-num">单元 6</span> 取舍表 + 一条审查评论</h2>
 
         <div class="cycle-flow">
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">A</span> 导入</div>
-            <p>工具没有绝对好坏：看<strong>你要做什么</strong>、<strong>查几次</strong>、<strong>n 多大</strong>。最后练写一条能落地的审查评论。</p>
+            <h3 class="step-title"><span class="step-num">6.1</span> 导入</h3>
+            <p>工具没有绝对好坏。</p>
+            <p>看三件事：你要做什么、查几次、n 多大。</p>
+            <p>最后练写一条能落地的审查评论。</p>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge teal"><span class="step-letter">B</span> 精读（外链）</div>
+            <h3 class="step-title"><span class="step-num">6.2</span> 去读</h3>
             <div class="read-box">
-              <p>打开 javascript.info《Map and Set》的 <strong>Summary</strong>，对照「何时用 Map / Set」。</p>
+              <p>打开 javascript.info《Map and Set》的 <strong>Summary</strong>。</p>
+              <p>对照「何时用 Map / Set」。</p>
               <a href="https://javascript.info/map-set#summary" target="_blank" rel="noopener">javascript.info · Summary</a>
               <span class="read-target">可选：<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#relation_to_arrays" target="_blank" rel="noopener">MDN Set · Relation to arrays</a>。</span>
             </div>
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge"><span class="step-letter">C</span> 讲解</div>
+            <h3 class="step-title"><span class="step-num">6.3</span> 讲解</h3>
             <table class="compare-table">
               <thead>
                 <tr><th>你想做的事</th><th>优先考虑</th><th>别一上来就…</th></tr>
@@ -520,7 +551,7 @@ function getName(byId, id) {
               </tbody>
             </table>
             <div class="callout teal">
-              <strong>经验法则：</strong>「只处理一次」→ 数组往往够；「同样的查找会做很多次」→ 先建 Set/Map。
+              <strong>经验法则：</strong>「只处理一次」→ 数组往往够。「同样的查找会做很多次」→ 先建 Set/Map。
             </div>
             <figure class="diagram" aria-label="includes 热路径 vs Set">
               <svg width="460" height="120" viewBox="0 0 460 120" role="img">
@@ -537,12 +568,12 @@ function getName(byId, id) {
           </div>
 
           <div class="cycle-step">
-            <div class="step-badge warn"><span class="step-letter">D</span> 编程小练（审查评论）</div>
+            <h3 class="step-title"><span class="step-num">6.4</span> 小练（审查评论）</h3>
             <div class="drill" data-drill="review-comment">
               <p class="drill-prompt">
                 假设 PR 里有这段代码（<code class="inline">incoming</code> 与 <code class="inline">existing</code> 都可能到几千）：
               </p>
-              <pre class="code" style="margin-top:0">for (const id of incoming) {
+              <pre class="code code-tight">for (const id of incoming) {
   if (existing.includes(id)) mark(id);
 }</pre>
               <p class="drill-prompt">在框里写一条<strong>简短审查评论</strong>（中文或英文都行）。应提到：问题（复杂度/热路径）、建议（Set）、以及何时值得改。</p>
@@ -567,8 +598,8 @@ function getName(byId, id) {
     <!-- wrap -->
     <section class="chapter" id="wrap">
       <div class="card">
-        <div class="chapter-num">收尾</div>
-        <h2>自检</h2>
+        <p class="unit-kicker">收尾</p>
+        <h2 class="unit-title">自检</h2>
         <ul class="check-list">
           <li>
             <input type="checkbox" id="lc1" />
@@ -594,7 +625,7 @@ function getName(byId, id) {
 
         <div class="finish-banner">
           <h3>启动课目标达成</h3>
-          <p>你已按「导入→精读→讲解→编程」走完六轮，具备讨论 Big-O 直觉与数组/Set/Map 取舍的共同语言。</p>
+          <p>你已按「导入 → 去读 → 讲解 → 小练」走完六轮。具备讨论 Big-O 直觉与数组 / Set / Map 取舍的共同语言。</p>
         </div>
 
         <div class="cross-cta">
@@ -611,7 +642,7 @@ function getName(byId, id) {
 
   <footer class="site-footer">
     <p><a href="index.html">首页</a> · <a href="prep.html">课前垫脚</a> · 正式启动课</p>
-    <p style="margin-top:8px">外链精读 + 本页讲解与编程小练</p>
+    <p class="footer-note">外链精读 + 本页讲解与编程小练</p>
   </footer>
   <script src="app.js"></script>
 </body>
