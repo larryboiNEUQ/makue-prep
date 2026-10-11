@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>课前垫脚 · Makue</title>
+  <meta name="description" content="编程课前垫脚：程序、变量、函数、条件循环、数组、读码级 JS/TS、复杂度直觉与小练习。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Makue <span>垫脚课</span></a>
+      <ul class="nav-links">
+        <li><a href="#s1">程序</a></li>
+        <li><a href="#s2">变量</a></li>
+        <li><a href="#s3">函数</a></li>
+        <li><a href="#s4">条件循环</a></li>
+        <li><a href="#s5">数组</a></li>
+        <li><a href="#s6">读码</a></li>
+        <li><a href="#s7">复杂度</a></li>
+        <li><a href="#s8">练习</a></li>
+        <li><a href="#s9">自检</a></li>
+      </ul>
+      <div class="nav-pages">
+        <a href="prep.html" class="current">垫脚</a>
+        <a href="lesson.html">正式课</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-badge">课前垫脚 · Prep</div>
+      <h1>先站稳，再谈「快不快」</h1>
+      <p class="hero-lead">
+        这页帮你把「电脑在按什么顺序做事」说清楚。看完后，你能听懂数组怎么扫、函数怎么传值，
+        并为正式课里的 Big-O 与 Set/Map 取舍打底——不必一次背完术语。
+      </p>
+      <div class="hero-meta">
+        <span><strong>时长</strong> 约 30–45 分钟</span>
+        <span><strong>形式</strong> 阅读 + 选择练习</span>
+        <span><strong>下一站</strong> <a href="lesson.html">正式启动课</a></span>
+      </div>
+    </header>
+
+    <nav class="card toc" aria-label="本章目录">
+      <p class="chapter-num">目录</p>
+      <ol class="toc-list">
+        <li><a href="#s1">计算机在干什么</a></li>
+        <li><a href="#s2">变量与值</a></li>
+        <li><a href="#s3">函数</a></li>
+        <li><a href="#s4">条件与循环</a></li>
+        <li><a href="#s5">数组</a></li>
+        <li><a href="#s6">读码级 JS / TS</a></li>
+        <li><a href="#s7">复杂度直觉</a></li>
+        <li><a href="#s8">小练习</a></li>
+        <li><a href="#s9">自检清单</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section class="chapter" id="s1">
+      <div class="card">
+        <div class="chapter-num">第 01 节</div>
+        <h2>计算机在干什么</h2>
+        <p>程序是一份<strong>按顺序执行的指令清单</strong>。电脑几乎总是从上到下、一步一步做（除非你故意跳转）。</p>
+        <p>三件事反复出现：</p>
+        <ul>
+          <li><strong>输入</strong>——给你的数据（用户点了按钮、读到一个列表）。</li>
+          <li><strong>处理</strong>——按规则改写、判断、计算。</li>
+          <li><strong>输出</strong>——结果（屏幕显示、返回一个值、写入文件）。</li>
+        </ul>
+        <div class="analogy">
+          <div class="analogy-label">比喻</div>
+          像做菜：菜谱是程序，食材是输入，炒完盛盘是输出。漏一步或顺序错了，结果就变。
+        </div>
+        <div class="callout">
+          <strong>记住：</strong>读代码时先问「这一行在改什么？下一步去哪？」——比先背名词有用。
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="chapter" id="s2">
+      <div class="card">
+        <div class="chapter-num">第 02 节</div>
+        <h2>变量与值</h2>
+        <p>变量是贴了名字的<strong>箱子</strong>。箱子里放着一个<strong>值</strong>（数字、文字、真假等）。</p>
+        <pre class="code"><span class="kw">let</span> name = <span class="str">"小李"</span>;  <span class="cmt">// 箱子叫 name，里面是文字</span>
+<span class="kw">let</span> count = <span class="num">3</span>;       <span class="cmt">// 箱子叫 count，里面是数字 3</span>
+count = <span class="num">4</span>;            <span class="cmt">// 把箱子里的东西换成 4</span></pre>
+        <ul>
+          <li>名字方便你引用「那个东西」，不用每次重写具体内容。</li>
+          <li>赋值 <code class="inline">=</code> 的意思是「把右边放进左边的箱子」，不是数学里的「相等」。</li>
+        </ul>
+        <div class="callout teal">
+          <strong>对比：</strong><code class="inline">const</code> 是「这个箱子不许换内容」；<code class="inline">let</code> 允许之后再换。读码时看到 const，可假定它不会被重新赋值。
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="chapter" id="s3">
+      <div class="card">
+        <div class="chapter-num">第 03 节</div>
+        <h2>函数：把步骤打包</h2>
+        <p>函数把「一串步骤」起个名字。调用时：传入<strong>参数</strong>（原料），得到<strong>返回值</strong>（成品）。</p>
+        <pre class="code"><span class="kw">function</span> double(n) {
+  <span class="kw">return</span> n * <span class="num">2</span>;   <span class="cmt">// 把结果交回去</span>
+}
+<span class="kw">let</span> x = double(<span class="num">5</span>);  <span class="cmt">// x 变成 10</span></pre>
+        <ul>
+          <li><strong>参数</strong>：调用时塞进去的值（上面的 <code class="inline">5</code>）。</li>
+          <li><strong>返回值</strong>：函数算完交给外面的东西（上面的 <code class="inline">10</code>）。</li>
+          <li>没有 return 时，外面常常拿到「空」（undefined）——调用方别指望有结果。</li>
+        </ul>
+        <div class="analogy">
+          <div class="analogy-label">比喻</div>
+          函数像榨汁机：水果进（参数），果汁出（返回值）。机器名字是函数名。
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="chapter" id="s4">
+      <div class="card">
+        <div class="chapter-num">第 04 节</div>
+        <h2>条件与循环</h2>
+        <h3>if：按情况走不同路</h3>
+        <pre class="code"><span class="kw">if</span> (score &gt;= <span class="num">60</span>) {
+  <span class="cmt">// 及格时做这些</span>
+} <span class="kw">else</span> {
+  <span class="cmt">// 否则做这些</span>
+}</pre>
+        <h3>for：把同一件事做多遍</h3>
+        <p>「扫一遍」= 按顺序看列表里的每一个元素，通常各看一次。</p>
+        <pre class="code"><span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i &lt; list.length; i++) {
+  <span class="cmt">// 对 list[i] 做点事</span>
+}</pre>
+        <div class="callout">
+          <strong>口语：</strong>一层循环 ≈ 「把清单从头到尾过一遍」。两层循环套在一起 ≈ 「对外面每一个，里面再完整扫一遍」——次数会乘起来。正式课会细讲。
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="chapter" id="s5">
+      <div class="card">
+        <div class="chapter-num">第 05 节</div>
+        <h2>数组：一排有编号的格子</h2>
+        <p>数组是<strong>有序的一排值</strong>。每个位置有<strong>下标</strong>（从 0 起算）。<strong>长度</strong>是格子个数。</p>
+        <pre class="code"><span class="kw">const</span> fruits = [<span class="str">"苹果"</span>, <span class="str">"香蕉"</span>, <span class="str">"梨"</span>];
+<span class="cmt">// 下标:        0        1       2</span>
+<span class="cmt">// fruits.length === 3</span>
+<span class="cmt">// fruits[1] === "香蕉"</span></pre>
+
+        <figure class="diagram" aria-label="数组遍历示意图">
+          <svg width="420" height="140" viewBox="0 0 420 140" role="img">
+            <title>从左到右扫数组</title>
+            <rect x="20" y="40" width="70" height="48" rx="8" fill="#fff" stroke="#3d5a80" stroke-width="1.5"/>
+            <text x="55" y="68" text-anchor="middle" font-size="14" fill="#1a1a1f" font-family="system-ui">苹果</text>
+            <text x="55" y="105" text-anchor="middle" font-size="12" fill="#6b6b78" font-family="system-ui">0</text>
+            <rect x="110" y="40" width="70" height="48" rx="8" fill="#eef2f7" stroke="#3d5a80" stroke-width="2"/>
+            <text x="145" y="68" text-anchor="middle" font-size="14" fill="#1a1a1f" font-family="system-ui">香蕉</text>
+            <text x="145" y="105" text-anchor="middle" font-size="12" fill="#6b6b78" font-family="system-ui">1</text>
+            <rect x="200" y="40" width="70" height="48" rx="8" fill="#fff" stroke="#3d5a80" stroke-width="1.5"/>
+            <text x="235" y="68" text-anchor="middle" font-size="14" fill="#1a1a1f" font-family="system-ui">梨</text>
+            <text x="235" y="105" text-anchor="middle" font-size="12" fill="#6b6b78" font-family="system-ui">2</text>
+            <path d="M40 22 H250" stroke="#2a9d8f" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6" fill="#2a9d8f"/>
+              </marker>
+            </defs>
+            <text x="145" y="16" text-anchor="middle" font-size="13" fill="#2a9d8f" font-family="system-ui">扫一遍：从左到右</text>
+            <text x="320" y="68" font-size="13" fill="#4a4a55" font-family="system-ui">当前停在下标 1</text>
+          </svg>
+          <figcaption>遍历 = 按顺序访问每个下标。高亮格表示「当前正在看的」。</figcaption>
+        </figure>
+
+        <p>常见动作：用下标取值、看长度、从头扫到尾。正式课会问：扫一遍要花多少「步」？</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="chapter" id="s6">
+      <div class="card">
+        <div class="chapter-num">第 06 节</div>
+        <h2>读码级 JS / TS（够用就好）</h2>
+        <p>下面只要求<strong>能读懂</strong>，不要求默写全部语法。</p>
+
+        <h3>const / let</h3>
+        <p><code class="inline">const</code> 绑定后不重新赋值；<code class="inline">let</code> 可以改。现代代码里优先 const。</p>
+
+        <h3>简单函数</h3>
+        <pre class="code"><span class="kw">const</span> add = (a, b) =&gt; a + b;  <span class="cmt">// 箭头函数，返回 a+b</span></pre>
+
+        <h3><code class="inline">.includes</code> / <code class="inline">.filter</code></h3>
+        <pre class="code"><span class="kw">const</span> nums = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>];
+nums.includes(<span class="num">2</span>);           <span class="cmt">// true：里面有没有 2？（会扫）</span>
+nums.filter(n =&gt; n &gt; <span class="num">1</span>);   <span class="cmt">// [2, 3]：留下符合条件的</span></pre>
+
+        <h3>Set / Map（各一句话）</h3>
+        <ul>
+          <li><strong>Set</strong>：一堆<strong>不重复</strong>的值，适合问「有没有这个？」（正式课对比数组 includes）。</li>
+          <li><strong>Map</strong>：一堆<strong>键 → 值</strong>，适合问「这个 id 对应谁？」。</li>
+        </ul>
+
+        <h3>类型形状 <code class="inline">{ id: string }</code></h3>
+        <p>在 TypeScript 里，这只是在说：「这个对象长这样——有一个叫 id 的字段，类型是字符串」。先当<strong>外形说明</strong>，不必深挖类型系统。</p>
+        <pre class="code"><span class="cmt">// 形状：至少有一个字符串 id</span>
+<span class="kw">type</span> User = { id: <span class="kw">string</span> };
+<span class="kw">const</span> u: User = { id: <span class="str">"u1"</span> };</pre>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="chapter" id="s7">
+      <div class="card">
+        <div class="chapter-num">第 07 节</div>
+        <h2>复杂度直觉（还不用背表）</h2>
+        <p><strong>n</strong> = 问题规模，常指「列表有多长」。列表越长，某些做法越慢。</p>
+
+        <figure class="diagram" aria-label="一层循环与两层循环">
+          <svg width="440" height="160" viewBox="0 0 440 160" role="img">
+            <title>一层 vs 两层循环</title>
+            <text x="10" y="24" font-size="14" font-weight="600" fill="#3d5a80" font-family="system-ui">一层：约 n 步</text>
+            <rect x="10" y="40" width="36" height="28" rx="5" fill="#eef2f7" stroke="#3d5a80"/>
+            <rect x="52" y="40" width="36" height="28" rx="5" fill="#eef2f7" stroke="#3d5a80"/>
+            <rect x="94" y="40" width="36" height="28" rx="5" fill="#eef2f7" stroke="#3d5a80"/>
+            <rect x="136" y="40" width="36" height="28" rx="5" fill="#eef2f7" stroke="#3d5a80"/>
+            <text x="90" y="90" text-anchor="middle" font-size="12" fill="#6b6b78" font-family="system-ui">每个格子看一次</text>
+
+            <text x="230" y="24" font-size="14" font-weight="600" fill="#c4783a" font-family="system-ui">两层：约 n × n 步</text>
+            <rect x="230" y="40" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="258" y="40" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="286" y="40" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="230" y="68" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="258" y="68" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="286" y="68" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="230" y="96" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="258" y="96" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <rect x="286" y="96" width="24" height="24" rx="3" fill="#fdf0ec" stroke="#c4783a"/>
+            <text x="335" y="80" font-size="12" fill="#6b6b78" font-family="system-ui">格子变成方阵</text>
+          </svg>
+          <figcaption>口语里常说：一层 ≈ O(n)，两层嵌套 ≈ O(n²)。正式课会展开。</figcaption>
+        </figure>
+
+        <p><strong>为何「数组上反复 includes」贵？</strong></p>
+        <p>
+          每次 <code class="inline">includes</code> 都可能把数组扫一遍。若外层再对 n 个元素各做一次 includes，
+          就变成「扫了大约 n 遍」——数据一大就明显慢。更好的结构（如 Set）把「有没有」变得便宜——这是正式课的核心。
+        </p>
+        <div class="callout">
+          <strong>垫课目标：</strong>听到「O(n) / O(n²)」时，能联想到「扫一遍 / 扫成方阵」，而不必先背完整符号表。
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section class="chapter" id="s8">
+      <div class="card">
+        <div class="chapter-num">第 08 节</div>
+        <h2>小练习</h2>
+        <p>点选项即可；也可先点「直接看答案」。对了会有简短说明。</p>
+
+        <div class="quiz-list">
+          <div class="quiz-item" data-answer="b" data-explain="变量是命名的箱子；值是箱子里的内容。">
+            <p class="quiz-q">1. 「变量」更接近下面哪一句？</p>
+            <div class="quiz-opts">
+              <button type="button" class="quiz-opt" data-opt="a"><span class="opt-letter">A</span> 永远不能改的数学公式</button>
+              <button type="button" class="quiz-opt" data-opt="b"><span class="opt-letter">B</span> 贴了名字的箱子，里面放着值</button>
+              <button type="button" class="quiz-opt" data-opt="c"><span class="opt-letter">C</span> 屏幕上显示的按钮</button>
+            </div>
+            <div class="quiz-feedback" role="status"></div>
+            <button type="button" class="quiz-reveal">直接看答案</button>
+          </div>
+
+          <div class="quiz-item" data-answer="a" data-explain="数组下标从 0 开始，所以第二个元素是下标 1。">
+            <p class="quiz-q">2. <code class="inline">const a = ["红","绿","蓝"]</code>，<code class="inline">a[1]</code> 是？</p>
+            <div class="quiz-opts">
+              <button type="button" class="quiz-opt" data-opt="a"><span class="opt-letter">A</span> "绿"</button>
+              <button type="button" class="quiz-opt" data-opt="b"><span class="opt-letter">B</span> "红"</button>
+              <button type="button" class="quiz-opt" data-opt="c"><span class="opt-letter">C</span> "蓝"</button>
+            </div>
+            <div class="quiz-feedback" role="status"></div>
+            <button type="button" class="quiz-reveal">直接看答案</button>
+          </div>
+
+          <div class="quiz-item" data-answer="c" data-explain="return 把结果交回调用方；没有 return，外面常常拿不到有用结果。">
+            <p class="quiz-q">3. 函数里的 <code class="inline">return</code> 主要做什么？</p>
+            <div class="quiz-opts">
+              <button type="button" class="quiz-opt" data-opt="a"><span class="opt-letter">A</span> 打印到屏幕</button>
+              <button type="button" class="quiz-opt" data-opt="b"><span class="opt-letter">B</span> 删除变量</button>
+              <button type="button" class="quiz-opt" data-opt="c"><span class="opt-letter">C</span> 把结果交回给调用它的代码</button>
+            </div>
+            <div class="quiz-feedback" role="status"></div>
+            <button type="button" class="quiz-reveal">直接看答案</button>
+          </div>
+
+          <div class="quiz-item" data-answer="b" data-explain="外层每个元素配内层一整遍，步数近似 n×n。">
+            <p class="quiz-q">4. 「两层循环，每层都跑 n 次」大约多少步？</p>
+            <div class="quiz-opts">
+              <button type="button" class="quiz-opt" data-opt="a"><span class="opt-letter">A</span> 大约 n 步</button>
+              <button type="button" class="quiz-opt" data-opt="b"><span class="opt-letter">B</span> 大约 n × n 步</button>
+              <button type="button" class="quiz-opt" data-opt="c"><span class="opt-letter">C</span> 永远只有 2 步</button>
+            </div>
+            <div class="quiz-feedback" role="status"></div>
+            <button type="button" class="quiz-reveal">直接看答案</button>
+          </div>
+
+          <div class="quiz-item" data-answer="a" data-explain="每次 includes 可能扫整表；外面再对每个元素做一次，总工作量接近 n 次扫描。">
+            <p class="quiz-q">5. 为什么「对数组里每个元素再 includes 一次」容易变慢？</p>
+            <div class="quiz-opts">
+              <button type="button" class="quiz-opt" data-opt="a"><span class="opt-letter">A</span> 因为 includes 本身常要扫数组，外层再乘一遍</button>
+              <button type="button" class="quiz-opt" data-opt="b"><span class="opt-letter">B</span> 因为 includes 只能用于文字</button>
+              <button type="button" class="quiz-opt" data-opt="c"><span class="opt-letter">C</span> 因为电脑讨厌字母 i</button>
+            </div>
+            <div class="quiz-feedback" role="status"></div>
+            <button type="button" class="quiz-reveal">直接看答案</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 -->
+    <section class="chapter" id="s9">
+      <div class="card">
+        <div class="chapter-num">第 09 节</div>
+        <h2>自检清单</h2>
+        <p>勾选表示「我能用自己的话讲给别人听」。勾选会保存在本机浏览器里。</p>
+        <ul class="check-list">
+          <li>
+            <input type="checkbox" id="c1" />
+            <label for="c1">程序是按顺序执行的指令；有输入、处理、输出。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c2" />
+            <label for="c2">变量是命名的箱子；const / let 的差别我知道。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c3" />
+            <label for="c3">函数有参数和返回值；我能读懂简单函数。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c4" />
+            <label for="c4">if 分岔路；for「扫一遍」是什么意思。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c5" />
+            <label for="c5">数组有下标（从 0）和长度；能想象遍历箭头。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c6" />
+            <label for="c6">见过 includes / filter；知道 Set、Map 各一句话用途。</label>
+          </li>
+          <li>
+            <input type="checkbox" id="c7" />
+            <label for="c7">n、一层循环、两层循环、反复 includes 为何贵——有直觉。</label>
+          </li>
+        </ul>
+
+        <div class="finish-banner">
+          <h3>可以去上正式启动课了</h3>
+          <p>清单大体勾完，就继续学 Big-O 口语与数组 / Set / Map 怎么选。</p>
+        </div>
+
+        <div class="cross-cta">
+          <p>下一站：正式启动课——把「慢在哪」说清楚，并学会在审查里做结构取舍。</p>
+          <a class="btn btn-primary" href="lesson.html">去上正式课 →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">首页</a> · 课前垫脚 · <a href="lesson.html">正式启动课</a></p>
+    <p style="margin-top:8px">自包含教学页 · 外链非必需</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
